@@ -1264,7 +1264,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'avalicearchiveswiki' => true,
 		'bigforestwiki' => true,
-		'test1wiki' => true,
+		'test1wiki' => false,
 		'inkubatorwiki' => true,
 		'malaysiawiki' => true,
 		'nationstateswiki' => true,
@@ -2000,9 +2000,9 @@ $wgConf->settings = array(
 	'wmgUseMsPackage' => array(
 		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
 		'calexitwiki' => true,
-		'test1wiki' => true,
+		'test1wiki' => false,
 	),
-	// MsUpload is enabled on extloadwiki via MsPackage
+	// MsUpload is enabled on test1wiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,
