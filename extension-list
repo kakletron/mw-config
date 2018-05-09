@@ -1,6 +1,6 @@
 $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddThis/AddThis.php
-$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php
+$IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/AdminLinks.php
 $IP/extensions/ArticleFeedbackv5/extension.json
 $IP/extensions/ArticleRatings/extension.json

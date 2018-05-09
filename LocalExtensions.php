@@ -8,7 +8,7 @@ if ( $wmgUseAddThis ) {
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
+	wfLoadExtension( 'UseAddHTMLMetaAndTitle' );
 }
 
 if ( $wmgUseAdminLinks ) {
