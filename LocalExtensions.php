@@ -8,7 +8,7 @@ if ( $wmgUseAddThis ) {
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	wfLoadExtension( 'UseAddHTMLMetaAndTitle' );
+	wfLoadExtension( 'AddHTMLMetaAndTitle' );
 }
 
 if ( $wmgUseAdminLinks ) {
