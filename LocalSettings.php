@@ -2176,7 +2176,7 @@ $wgConf->settings = array(
 		'lcars47wiki' => 'manager',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
-		'sau226wiki' => 'consul',		
+		'sau226wiki' => 'consul',
 		'testwiki' => 'consul',
 	),
 	'wgManageWikiExtensions' => array(
@@ -6927,6 +6927,9 @@ if ( defined( 'MW_DB' ) ) {
 # Initialize dblist
 $wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
+
+// $wgManageWikiExtensions
+require_once( "/srv/mediawiki/config/ManageWikiExtensions.php" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 4 );
