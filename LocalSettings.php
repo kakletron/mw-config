@@ -2842,6 +2842,7 @@ $wgConf->settings = array(
 		'csnimsbordeauxwiki' => true,
 		'cybersecuritywiki' => true,
 		'dalarwiki' => true,
+		'decryptedwiki' => true,
 		'detlefswiki' => true,
 		'dicficwiki' => true,
 		'didaprowiki' => true,
@@ -7059,6 +7060,7 @@ $wgConf->settings = array(
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/1/14/Mediawiki-icon-135x135.png",
 		'kunwokwiki' => "//$wmgUploadHostname/kunwokwiki/8/8f/Kunwok_135x150.jpg",
 		'kuonsamwiki' => "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png",
+		'kyunganwiki' => "//$wmgUploadHostname/kyunganwiki/3/35/경안.png",
 		'lambdawarswiki' => "//$wmgUploadHostname/lambdawarswiki/7/76/LW_logo_mainpage.png",
 		'lanstationwiki' => "//$wmgUploadHostname/lanstationwiki/e/e2/Miniian.png",
 		'lapeninsulewiki' => "//$wmgUploadHostname/lapeninsulewiki/6/66/Constellation_de_la_P%C3%A9ninsule.png",
@@ -7697,10 +7699,17 @@ $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
+	list( $DBname, $siteName, $siteLang, $siteExtensions ) = array_pad( $wikiDB, 4, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+
+//	$siteExtensionsArray = explode( ",", $siteExtensions );
+//	foreach ( $wgManageWikiExtensions as $name => $ext ) {
+//		if ( in_array( $name, $siteExtensionsArray ) ) {
+//			$wgConf->settings[$ext['var']]$DBname] = true;
+//		}
+//	}
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
@@ -7796,19 +7805,46 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*
-if ( $wgDBname == 'allthetropeswiki' ) {
+/*if ( $wgDBname == '0x1winwiki' ||
+	$wgDBname == '131parkhurstwiki' ||
+	$wgDBname == '161647y2awiki' ||
+	$wgDBname == '1cewiki' ||
+	$wgDBname == '1sttractionbrigadewiki' ||
+	$wgDBname == '2cvcupfrancewiki' ||
+	$wgDBname == '3dprinterscncwiki' ||
+	$wgDBname == '4mindswiki' ||
+	$wgDBname == '690squadronwiki' ||
+	$wgDBname == '8stationwiki' ||
+	$wgDBname == '99pdwikiwiki' ||
+	$wgDBname == 'a360wiki' ||
+	$wgDBname == 'aapwiki' ||
+	$wgDBname == 'aaupaftlocal6075wiki' ||
+	$wgDBname == 'abainnovationwiki' ||
+	$wgDBname == 'abhirupghoshwiki' ||
+	$wgDBname == 'abitaregeawiki' ||
+	$wgDBname == 'absurdopediawiki' ||
+	$wgDBname == 'abundancewiki' ||
+	$wgDBname == 'abzewiki' ||
+	$wgDBname == 'acasrbijawiki' ||
+	$wgDBname == 'accademiadellebirrewiki' ||
+	$wgDBname == 'access7wiki' ||
+	$wgDBname == 'accorderiewiki' ||
+	$wgDBname == 'accountingwiki' ||
+	$wgDBname == 'acewikiwiki' ||
+	$wgDBname == 'achancetopursuewiki' ||
+	$wgDBname == 'acprojectwiki' ||
+	$wgDBname == 'actartletraswiki') {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 14:30 UTC until approx. 16:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 14:25 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 15:10 UTC until approx. 15:45 UTC. During this time the wiki will be in read-only mode. Please save your edits before 15:05 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}
-*/
+}*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
