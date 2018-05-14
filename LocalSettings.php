@@ -4804,7 +4804,7 @@ $wgConf->settings = array(
 				'centralauth-oversight' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => false,
+				'createwiki' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
@@ -5462,11 +5462,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wgRevokePermissions' => array(
-		'default' => array(
-                        'wikicreator' => array(
-                                'createwiki' => true,
-                        ),
-                ),
+		'default' => array(),
 		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
