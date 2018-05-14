@@ -609,12 +609,12 @@ $wgConf->settings = array(
 			'Leisure' => 'leisure',
 			'Literature/Writing' => 'literature',
 			'Medicine/Medical' => 'medical',
-			'Miliary/War' => 'military',
+			'Military/War' => 'military',
 			'Music' => 'music',
 			'Podcast' => 'podcast',
 			'Private' => 'private',
 			'Religion' => 'religion',
-			'Sofware/Computing' => 'software',
+			'Software/Computing' => 'software',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
 		),
@@ -4804,7 +4804,7 @@ $wgConf->settings = array(
 				'centralauth-oversight' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
+				'createwiki' => false,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
@@ -5462,7 +5462,11 @@ $wgConf->settings = array(
 		),
 	),
 	'wgRevokePermissions' => array(
-		'default' => array(),
+		'default' => array(
+                        'wikicreator' => array(
+                                'createwiki' => true,
+                        ),
+                ),
 		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
@@ -5565,6 +5569,9 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'youtubewiki' => true,
+	),
+	'wgRelatedArticlesUseCirrusSearch' => array(
+		'default' => false,
 	),
 
 	// Restriction types
@@ -6416,6 +6423,7 @@ $wgConf->settings = array(
 		'thingexplainerwiki' => "//$wmgUploadHostname/thingexplainerwiki/3/33/Mainpage_logo.png",
 		'thireswiki' => "//$wmgUploadHostname/thireswiki/9/9e/티레스_위키_로고.png",
 		'teireawiki' => "//$wmgUploadHostname/teireawiki/e/e5/Teirea_wiki_logo.png",
+		'tesminadventureswiki' => "//$wmgUploadHostname/tesminadventureswiki/4/4c/Tesmin-wiki-logo.png",
 		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/e/ed/Texwikilogo2.png",
 		'tiandiwiki' => "//$wmgUploadHostname/tiandiwiki/8/80/Tiandiwikilogo135.png",
 		'tigerpediawiki' => "//$wmgUploadHostname/tigerpediawiki/9/9b/TP_transparent_135.png",
@@ -7013,47 +7021,6 @@ EOF;
 	return true;
 }
 */
-
-// leaving here as placeholder for future db work
-/*if ( $wgDBname == '0x1winwiki' ||
-	$wgDBname == '131parkhurstwiki' ||
-	$wgDBname == '161647y2awiki' ||
-	$wgDBname == '1cewiki' ||
-	$wgDBname == '1sttractionbrigadewiki' ||
-	$wgDBname == '2cvcupfrancewiki' ||
-	$wgDBname == '3dprinterscncwiki' ||
-	$wgDBname == '4mindswiki' ||
-	$wgDBname == '690squadronwiki' ||
-	$wgDBname == '8stationwiki' ||
-	$wgDBname == '99pdwikiwiki' ||
-	$wgDBname == 'a360wiki' ||
-	$wgDBname == 'aapwiki' ||
-	$wgDBname == 'aaupaftlocal6075wiki' ||
-	$wgDBname == 'abainnovationwiki' ||
-	$wgDBname == 'abhirupghoshwiki' ||
-	$wgDBname == 'abitaregeawiki' ||
-	$wgDBname == 'absurdopediawiki' ||
-	$wgDBname == 'abundancewiki' ||
-	$wgDBname == 'abzewiki' ||
-	$wgDBname == 'acasrbijawiki' ||
-	$wgDBname == 'accademiadellebirrewiki' ||
-	$wgDBname == 'access7wiki' ||
-	$wgDBname == 'accorderiewiki' ||
-	$wgDBname == 'accountingwiki' ||
-	$wgDBname == 'acewikiwiki' ||
-	$wgDBname == 'achancetopursuewiki' ||
-	$wgDBname == 'acprojectwiki' ||
-	$wgDBname == 'actartletraswiki') {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
-	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 15:10 UTC until approx. 15:45 UTC. During this time the wiki will be in read-only mode. Please save your edits before 15:05 UTC!</td>
-			</tr></tbody></table>
-EOF;
-		return true;
-	}
-}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
