@@ -709,13 +709,13 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'templatesandbox' => array(
-			'name' => 'Template Sanbox',
+			'name' => 'Template Sandbox',
 			'var' => 'wmgUseTemplateSandbox',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
 		),
-		'templatestlyes' => array(
+		'templatestyles' => array(
 			'name' => 'Template Styles',
 			'var' => 'wmgUseTemplateStyles',
 			'conflicts' => false,
