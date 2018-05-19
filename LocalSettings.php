@@ -396,6 +396,7 @@ $wgConf->settings = array(
 			'froggy.info' => 'feuwiki',
 			'garrettcountyguide.com' => 'garrettcountyguidewiki',
 			'give.effectively.to' => 'givewiki',
+			'guiasdobrasil.com.br' => 'guiaslocaiswiki',
 			'holonet.pw' => 'holonetwiki',
 			'karagash.info' => 'karagashwiki',
 			'kunwok.org' => 'kunwokwiki',
@@ -457,6 +458,7 @@ $wgConf->settings = array(
 			'wiki.ngscott.net' => 'ngscottwiki',
 			'wiki.nvda-nl.org' => 'nvdanlwiki',
 			'wiki.ombre.io' => 'ombrewiki',
+			'wiki.pablojprieto.com.es' => 'prnetwiki',
 			'wiki.pupilliam.com' => 'techwikiwiki',
 			'www.radviser.org' => 'radviserwiki',
 			'wiki.staraves-no.cz' => 'staravesnowiki',
@@ -5729,6 +5731,7 @@ $wgConf->settings = array(
 		'garrettcountyguidewiki' => 'https://garrettcountyguide.com',
 		'givewiki' => 'https://give.effectively.to',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
+		'guiaslocaiswiki' => 'https://guiasdobrasil.com.br',
 		'holonetwiki' => 'https://holonet.pw',
 		'iceposeidonwiki' => 'https://www.iceposeidonwiki.com',
 		'inebriationconfederationwiki' => 'https://wiki.inebriation-confederation.com',
@@ -5764,6 +5767,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
 		'plnonbinarywiki' => 'https://pl.nonbinary.wiki',
 		'podpediawiki' => 'https://podpedia.org',
+		'prnetwiki' => 'https://wiki.pablojprieto.com.es',
 		'programmingredwiki' => 'https://programming.red',
 		'pruebawiki' => 'https://es.publictestwiki.com',
 		'pwikiwiki' => 'https://pwiki.arkcls.com',
@@ -6260,6 +6264,7 @@ $wgConf->settings = array(
 			'wiki\.rizalespe\.com',
 			'saf\.songcontests\.eu',
 			'wiki\.staraves-no\.cz',
+			'wiki\.pablojprieto.com\.es',
 			'wiki.pupilliam\.com',
 			'oecumene\.org',
 			'www\.openonderwijs\.org',
@@ -6302,6 +6307,7 @@ $wgConf->settings = array(
 			'www\.schulwiki\.de',
 			'holonet\.pw',
 			'www\.radviser\.org',
+			'guiasdobrasil\.com\.br',
 		),
 	),
 
@@ -6626,7 +6632,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Increment this version number whenever you change the site notice
 // and don't comment it out
 $wgMajorSiteNoticeID = 15;
-$snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
+$snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
 /*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -6635,27 +6641,13 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Our VPS provider, RamNode, is performing maintenance on one of the servers used to host our VPSes. Therefore there will be downtime around 10:00 UTC and all wikis will be read-only starting 9:30 UTC, so make sure to save all your changes before then. ETA is approximately 2 hours from the initial time given. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		<td>Congrats to <a href="https://meta.miraheze.org/User:John">@John</a> for becoming a steward</td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
 */
-
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
- 	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#John.27s_Request_for_Stewardship">open Request for Stewardship</a>. All Miraheze users are welcome to comment on this.</td>
-			</tr></tbody></table>
-EOF;
-	}
-	return true;
-}
-
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
