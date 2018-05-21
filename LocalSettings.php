@@ -4124,6 +4124,7 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'autoreview' => true,
 			),
+		),
 		'thebbwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
