@@ -4361,7 +4361,6 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'deletelogentry' => true,
 				'deleterevision' => true,
-				'hideuser' => true,
 				'rollback' => true,
 			),
 			'user' => array(
