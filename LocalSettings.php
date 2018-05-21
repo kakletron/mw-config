@@ -1187,9 +1187,6 @@ $wgConf->settings = array(
 	'wmgUseContributionScores' => array(
 		'default' => false,
 	),
-	'wmgUseCookieWarning' => array(
-		'default' => false,
-	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
 	),
