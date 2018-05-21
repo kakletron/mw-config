@@ -4361,6 +4361,7 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'deletelogentry' => true,
 				'deleterevision' => true,
+				'hideuser' => true,
 				'rollback' => true,
 			),
 			'user' => array(
@@ -5689,6 +5690,7 @@ $wgConf->settings = array(
 		'teessidehackspacewiki' => 'https://wiki.teessidehackspace.org.uk',
 		'tensorflowlearningwiki' => 'https://wiki.tensorflow.community',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk',
+		'uzencwiki' => 'https://enc.for.uz',
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
 		'wikiescolawiki' => 'https://wikiescola.com.br',
 		'wikigtscwiki' => 'https://wiki.gtsc.vn',
@@ -6203,6 +6205,7 @@ $wgConf->settings = array(
 			'holonet\.pw',
 			'www\.radviser\.org',
 			'guiasdobrasil\.com\.br',
+			'enc\.for\.uz',
 		),
 	),
 
