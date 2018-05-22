@@ -451,6 +451,10 @@ if ( $wmgUsePipeEscape ) {
 	require_once( "$IP/extensions/PipeEscape/PipeEscape.php" );
 }
 
+if ( $wmgUsePivot ) {
+	wfLoadSkin( 'pivot' );
+}
+
 if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }

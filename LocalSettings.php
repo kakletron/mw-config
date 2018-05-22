@@ -285,6 +285,15 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
+	'wgPivotDefaultFeatures' => array(
+		'thegreatwarwiki' => array(
+			'usePivotTabs' => true,
+			'showHelpUnderTools' => false,
+			'showRecentChangesUnderTools' => false,
+			'wikiNameDesktop' => 'The Great War 1914-1918',
+			'showFooterIcons' => true,
+		),
+	),
 	'wgEnableRcFiltersBetaFeature' => array(
 		'default' => false,
 		'test1wiki' => true,
@@ -1439,6 +1448,9 @@ $wgConf->settings = array(
 	'wmgUsePipeEscape' => array(
 		'default' => false,
 	),
+	'wmgUsePivot' => array(
+		'default' => false,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 	),
@@ -1952,6 +1964,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'CC0 Public Domain',
 		'tmewiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
 		'vandalismwikiwiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
+		'warewikiwiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
 		'wisdomwikiwiki' => 'Creative Commons Attribution-NonCommercial-NoDerivatives',
 	),
 	'wgRightsUrl' => array(
@@ -1986,6 +1999,7 @@ $wgConf->settings = array(
 		'ujhswiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'unjeongwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'vandalismwikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'warewikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'wisdomwikiwiki' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
 	),
 
