@@ -11,6 +11,7 @@ wfLoadExtensions( [
 	'Cite',
 	'CiteThisPage',
 	'CodeEditor',
+	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'CookieWarning',

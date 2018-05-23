@@ -531,10 +531,13 @@ $wgConf->settings = array(
 	),
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => array(
-		'default' => false,
+		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
 	),
 	'wgCookieSetOnAutoblock' => array(
+		'default' => true,
+	),
+	'wgCookieWarningEnabled' => array(
 		'default' => true,
 	),
 	// Database
@@ -4862,6 +4865,7 @@ $wgConf->settings = array(
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'meregoswiki' => 'https://meregos.com',
+		'mikrodevwiki' => 'https://wiki.mikrodev.com',
 		'morfarkultenwiki' => 'https://morfarkulten.tk',
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nerdwiki' => 'https://wiki.gamergeeked.us',
@@ -5002,6 +5006,7 @@ $wgConf->settings = array(
 		'appswiki' => 'metrolook',
 		'avalicearchiveswiki' => 'timeless',
 		'bdorpwiki' => 'erudite',
+		'caedawiki' => 'metrolook',
 		'claneuphoriawiki' => 'gamepress',
 		'corydoctorowwiki' => 'timeless',
 		'cristianopediawiki' => 'timeless',		
@@ -5021,7 +5026,7 @@ $wgConf->settings = array(
 		'raymanspeedrunwiki' => 'vector',
 		'revitwiki' => 'vector',
 		'thebbwiki' => 'apex',
-		'thegreatwarwiki' => 'metrolook',
+		'thegreatwarwiki' => 'pivot',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
@@ -5151,6 +5156,7 @@ $wgConf->settings = array(
 		'pluspiwiki' => "//$wmgUploadHostname/pluspiwiki/6/64/Favicon.ico",
 		'pocketmonsterswiki' => "//$wmgUploadHostname/pocketmonsterswiki/d/d2/PMFavicon.png",
 		'podpediawiki' => "//$wmgUploadHostname/podpediawiki/0/0e/PodpediaFavicon2.png",
+		'popnmusicwiki' => "//$wmgUploadHostname/popnmusicwiki/6/60/WikiFavicon.png",
 		'puzzlewiki' => "//$wmgUploadHostname/puzzlewiki/0/0d/PuzzlepediaFavicon.png",
 		'pwikiwiki' => "//$wmgUploadHostname/pwikiwiki/8/8c/Arkcls_favicon.ico",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/08/Rayman_Speedrun_Wiki_Favicon.png",
@@ -5275,6 +5281,13 @@ $wgConf->settings = array(
 		'meta' => array(
 			'type' => 'url',
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
+		),
+	),
+	
+	'wgTidyConfig' => array(
+		'default' => null,
+		'tmewiki' => array(
+			'driver' => 'RemexHtml',
 		),
 	),
 
@@ -5420,6 +5433,7 @@ $wgConf->settings = array(
 			'www\.radviser\.org',
 			'guiasdobrasil\.com\.br',
 			'enc\.for\.uz',
+			'wiki\.mikrodev\.com',
 		),
 	),
 
