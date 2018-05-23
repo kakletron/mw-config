@@ -4518,7 +4518,7 @@ $wgConf->settings = array(
 				'blockedfromchat',
 			),
 			'bureaucrat' => array(
-				'bureaucrat' => true,
+				'bureaucrat'
 			),
 		),
 		'+trexwiki' => array(
