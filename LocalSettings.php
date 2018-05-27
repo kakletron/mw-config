@@ -558,6 +558,7 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
+		'anglishwiki' => 'Import underway, please wait until the system finishes the import',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
