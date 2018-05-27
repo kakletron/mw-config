@@ -285,13 +285,14 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
-	'wgPivotDefaultFeatures' => array(
+	'wgPivotFeatures' => array(
 		'thegreatwarwiki' => array(
 			'usePivotTabs' => true,
+			'fixedNavBar' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true,
+			'showFooterIcons' => true
 		),
 	),
 	'wgEnableRcFiltersBetaFeature' => array(
@@ -1317,6 +1318,9 @@ $wgConf->settings = array(
                 'default' => false,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
+		'default' => false,
+	),
+	'wmgUseLiberty' => array(
 		'default' => false,
 	),
 	'wmgUseLinkSuggest' => array(
@@ -4816,7 +4820,6 @@ $wgConf->settings = array(
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'meregoswiki' => 'https://meregos.com',
 		'mikrodevwiki' => 'https://wiki.mikrodev.com',
-		'morfarkultenwiki' => 'https://morfarkulten.tk',
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nerdwiki' => 'https://wiki.gamergeeked.us',
 		'nextlevelwikiwiki' => 'https://wiki.lbcomms.co.za',
@@ -5155,6 +5158,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => "//$wmgUploadHostname//valentinaprojectwiki/9/9e/Seamly2D_logo_128x128.png",
 		'vandalismwikiwiki' => "//$wmgUploadHostname//vandalismwikiwiki/6/64/Favicon.ico",
 		'wakandawiki' => "//$wmgUploadHostname/wakandawiki/e/e6/Wkd.jpg",
+		'wareswikiwiki' => "//$wmgUploadHostname/warewikiwiki/6/64/Favicon.ico",
 		'wiki1776wiki' => "//$wmgUploadHostname/wiki1776wiki/9/9b/Favicon_Wiki1776_en_color_lima_%28transparente%29.ico",
 		'wikidolphinhansenwiki' => "//$wmgUploadHostname/wikidolphinhansenwiki/b/bf/Dolphin-icon-150.png",
 		"wikiletraswiki" => "//$wmgUploadHostname/wikiletraswiki/2/26/Favicon.png",
@@ -5329,7 +5333,6 @@ $wgConf->settings = array(
 			'madgenderscience\.wiki',
 			'marinebiodiversitymatrix\.org',
 			'meregos\.com',
-			'morfarkulten\.tk',
 			'nenawiki\.org',
 			'wiki\.ngscott\.net',
 			'nonbinary\.wiki',
@@ -5628,8 +5631,10 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	}
 
 	$siteSettingsArray = json_decode( $siteSettings, true );
-	foreach ( $siteSettingsArray as $setVar => $setVal ) {
-		$wgConf->settings[$setVar][$DBname] = $setVal;
+	if ( is_array( $siteSettingsArray ) || is_object( $siteSettingsArray ) ) {
+		foreach ( $siteSettingsArray as $setVar => $setVal ) {
+			$wgConf->settings[$setVar][$DBname] = $setVal;
+		}
 	}
 }
 
