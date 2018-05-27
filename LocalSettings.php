@@ -1414,9 +1414,6 @@ $wgConf->settings = array(
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 	),
-	'wmgUseNewUsersList' => array(
-		'default' => false,
-	),
 	'wmgUseNostalgia' => array(
 		'default' => false,
 		'test1wiki' => true,

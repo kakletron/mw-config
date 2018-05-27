@@ -470,13 +470,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'newuserslist' => array(
-			'name' => 'New Users List',
-			'var' => 'wmgUseNewUsersList',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'newusermessage' => array(
 			'name' => 'New User Message',
 			'var' => 'wmgUseNewUserMessage',
