@@ -1172,9 +1172,6 @@ $wgConf->settings = array(
 		'default' => true,
 		'whentheycrywiki' => false,
 	),
-	'wmgUseCentralNotice' => array(
-		'default' => true,
-	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 	),
