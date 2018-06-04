@@ -10,7 +10,7 @@ $wgManageWikiExtensions = array(
 		),
  		'htmlmetaadntitle' => array(
 			'name' => 'HTML Meta and Title',
-			'var' => 'wmgUseHTMLMetaAndTitle',
+			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
@@ -852,6 +852,11 @@ $wgManageWikiExtensions = array(
 
 // type can be "text" or "select".
 $wgManageWikiSettings = array(
+	'wgFavicon' => array(
+		'name' => 'Favicon',
+		'requires' => false,
+		'type' => 'text',
+	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,

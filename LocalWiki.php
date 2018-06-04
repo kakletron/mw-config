@@ -417,7 +417,8 @@ if ( $wmgUseMainPageWhitelist ) {
 			"Hauptseit",
 			"Accueil",
 			"Halaman Utama",
-			"特別:アカウント作成"
+			"特別:アカウント作成",
+			"Chyba povolení",
 		)
 	);
 }
