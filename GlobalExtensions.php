@@ -35,11 +35,11 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'Poem',
 	'Renameuser',
-	'SiteMatrix',
 	'Timeline',
 	'Thanks',
 	'TitleBlacklist',
 	'TorBlock',
+	'WikiDiscover',
 	'WikiEditor',
 	'cldr'
 ] );
