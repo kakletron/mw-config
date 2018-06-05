@@ -446,7 +446,7 @@ $wgConf->settings = array(
 	'wgCreateWikiEmailNotifications' => array(
 		'default' => true,
 	),
-	'wmgCreateWikiSQLfiles' => array(
+	'wgCreateWikiSQLfiles' => array(
 		'default' => array(
 			"$IP/maintenance/tables.sql",
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
@@ -1245,11 +1245,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
-	),
-	'wmgUseCreateWiki' => array(
-		'default' => false,
-		'metawiki' => true,
-		'test1wiki' => true,
 	),
 	'wmgUseCrossReference' => array(
 		'default' => false,
