@@ -443,6 +443,9 @@ $wgConf->settings = array(
 	'wgCreateWikiDatabase' => array(
 		'default' => 'metawiki',
 	),
+	'wgCreateWikiDBDirectory' => array(
+		'default' => '/srv/mediawiki/dblist',
+	),
 	'wgCreateWikiEmailNotifications' => array(
 		'default' => true,
 	),
